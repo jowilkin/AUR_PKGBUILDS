@@ -22,14 +22,14 @@ build() {
   if [ -d "$_gitname" ] ; then
     msg "Updating repository from server...."
     cd "$_gitname"
+    git pull
   else
     msg "Cloning from GIT server...."
     git clone "$_gitroot" "$_gitname"
   fi
 
   cd "$srcdir/$_gitname"
-  git submodule update --init --recursive
-  msg "GIT checkout and submodule update done or server timeout"
+  msg "GIT checkout done or server timeout"
 
   # Clone source into a new local repo for build
   rm -rf "$srcdir/$_gitname-build"
