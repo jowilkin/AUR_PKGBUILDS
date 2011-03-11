@@ -2,7 +2,7 @@
 # Note: Apache ant and java must be on the path for make to succeed.
 #
 pkgname=rstudio-desktop-git
-pkgver=20110310
+pkgver=20110311
 pkgrel=1
 pkgdesc="A new integrated development environment (IDE) for R"
 arch=('i686' 'x86_64')
@@ -30,11 +30,6 @@ build() {
 
   cd "$srcdir/$_gitname"
   msg "GIT checkout done or server timeout"
-
-  # Install Qt sdk
-  msg "Downloading and installing Qt SDK"
-  cd "$srcdir/$_gitname/dependencies/linux/package"
-  ./install-qt-sdk
 
   # Install gwt - this creates files inside the src package that are needed for the build
   msg "Downloading and installing gwt"
