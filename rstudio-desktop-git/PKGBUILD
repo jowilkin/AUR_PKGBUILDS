@@ -8,8 +8,8 @@ pkgdesc="A new integrated development environment (IDE) for R"
 arch=('i686' 'x86_64')
 url="http://www.rstudio.org/"
 license=('custom')
-depends=('r' 'qt' 'boost-libs')
-makedepends=('git' 'cmake' 'boost' 'java-environment' 'apache-ant' 'unzip' 'openssl' 'bzip2' 'pam')
+depends=('r>=2.11.1' 'qt>=4.7' 'boost-libs>=1.40')
+makedepends=('git' 'cmake>=2.6' 'boost>=1.40' 'java-environment' 'apache-ant' 'unzip' 'openssl' 'bzip2' 'pam')
 provides=('rstudio-desktop')
 conflicts=('rstudio-desktop')
 
