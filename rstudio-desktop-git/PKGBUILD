@@ -1,5 +1,10 @@
-# Maintainer: JT Wilkinson <jowilkin@tu dot archserver dot org>
+#
+# Maintainer: JT Wilkinson <jowilkin at tu dot archserver dot org>
+#
 # Note: Apache ant and java must be on the path for make to succeed.
+#       If either was installed as a dependency during the build, you
+#       will need to log out and then log back in for the changes to
+#       your path and JAVA_HOME environment variable to take effect.
 #
 pkgname=rstudio-desktop-git
 pkgver=20110311
