@@ -31,19 +31,20 @@ build() {
   cd "$srcdir/$_gitname"
   msg "GIT checkout done or server timeout"
 
-  # Clone source into a new local repo for build
-  rm -rf "$srcdir/$_gitname-build"
-  git clone "$srcdir/$_gitname" "$srcdir/$_gitname-build"
-
   # Install Qt sdk
   msg "Downloading and installing Qt SDK"
-  cd $srcdir/$_gitname-build/dependencies/linux/package
+  cd "$srcdir/$_gitname/dependencies/linux/package"
   ./install-qt-sdk
 
   # Install gwt - this creates files inside the src package that are needed for the build
   msg "Downloading and installing gwt"
-  cd "$srcdir/$_gitname-build/dependencies/common"
+  cd "$srcdir/$_gitname/dependencies/common"
   ./install-gwt
+
+  # Clone source into a new local repo for build
+  rm -rf "$srcdir/$_gitname-build"
+  #git clone "$srcdir/$_gitname" "$srcdir/$_gitname-build"
+  cp -r "$srcdir/$_gitname" "$srcdir/$_gitname-build" 
 
   # Configure with cmake in a new buld directory as recommended in the rstudio INSTALL file
   msg "Configuring the makefile with cmake"
