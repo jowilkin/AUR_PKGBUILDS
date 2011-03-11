@@ -9,7 +9,7 @@ arch=('i686' 'x86_64')
 url="http://www.rstudio.org/"
 license=('custom')
 depends=('r' 'qt' 'boost-libs')
-makedepends=('git' 'cmake' 'boost' 'apache-ant' 'unzip' 'openssl' 'bzip2' 'pam')
+makedepends=('git' 'cmake' 'boost' 'java-environment' 'apache-ant' 'unzip' 'openssl' 'bzip2' 'pam')
 provides=('rstudio-desktop')
 conflicts=('rstudio-desktop')
 
