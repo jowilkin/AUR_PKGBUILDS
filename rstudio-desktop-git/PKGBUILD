@@ -22,6 +22,11 @@ _gitroot="git://github.com/rstudio/rstudio.git"
 _gitname="rstudio"
 
 build() {
+  # Check if ant and java can be found
+  msg "Checking if java and ant are on the PATH...."
+  which ant > /dev/null
+  which java > /dev/null
+
   cd "$srcdir"
   echo "Entering $srcdir"
   if [ -d "$_gitname" ] ; then
