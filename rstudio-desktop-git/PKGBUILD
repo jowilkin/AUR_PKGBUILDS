@@ -55,8 +55,12 @@ build() {
   msg "Configuring the makefile with cmake"
   mkdir "$srcdir/$_gitname-build/build"
   cd "$srcdir/$_gitname-build/build"
+  
   # Configure cmake to install to /opt/rstudio
-  cmake -DRSTUDIO_TARGET=Desktop -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/opt/rstudio ..
+  cmake -DRSTUDIO_TARGET=Desktop \
+	-DCMAKE_BUILD_TYPE=Release \
+	-DCMAKE_INSTALL_PREFIX=/opt/rstudio \
+	..
 }
 
 package() {
