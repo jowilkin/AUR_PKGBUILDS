@@ -1,0 +1,16 @@
+# Install script for rstudio-desktop-git package
+
+# arg 1:  the new package version
+post_install() {
+  # Update icon cache per Namcap's output
+  xdg-icon-resource install --novendor --size 16 /usr/share/icons/hicolor/16x16/apps/rstudio.png
+  xdg-icon-resource install --novendor --size 24 /usr/share/icons/hicolor/24x24/apps/rstudio.png
+  xdg-icon-resource install --novendor --size 32 /usr/share/icons/hicolor/32x32/apps/rstudio.png
+  xdg-icon-resource install --novendor --size 48 /usr/share/icons/hicolor/48x48/apps/rstudio.png
+  xdg-icon-resource install --novendor --size 256 /usr/share/icons/hicolor/256x256/apps/rstudio.png
+
+  # Update mime types per Namcap's output
+  update-mime-database /usr/share/mime
+}
+
+# vim:set ts=2 sw=2 et:

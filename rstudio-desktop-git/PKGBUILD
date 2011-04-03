@@ -17,6 +17,7 @@ depends=('r>=2.11.1' 'qt>=4.7' 'boost-libs>=1.40')
 makedepends=('git' 'cmake>=2.6' 'boost>=1.40' 'java-environment' 'apache-ant' 'unzip' 'openssl' 'pam')
 provides=('rstudio-desktop')
 conflicts=('rstudio-desktop')
+install=$pkgname.install
 
 _gitroot="git://github.com/rstudio/rstudio.git"
 _gitname="rstudio"
