@@ -67,6 +67,9 @@ package() {
   msg "Starting make and install...."
   cd "$srcdir/$_gitname-build/build"
   make DESTDIR="$pkgdir/" install
+
+  # Remove some unnecessary files
+  rm -f "$pkgdir/opt/$pkgname/www/.gitignore"
   
   msg "Installing license...."
   install -D -m644 "$srcdir/$_gitname-build/COPYING" "${pkgdir}/usr/share/licenses/${pkgname}/COPYING"
