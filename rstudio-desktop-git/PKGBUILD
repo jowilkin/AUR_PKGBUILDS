@@ -59,7 +59,7 @@ build() {
   # Configure cmake to install to /opt/rstudio
   cmake -DRSTUDIO_TARGET=Desktop \
 	-DCMAKE_BUILD_TYPE=Release \
-	-DCMAKE_INSTALL_PREFIX=/opt/rstudio \
+	-DCMAKE_INSTALL_PREFIX=/opt/$pkgname \
 	..
 }
 
